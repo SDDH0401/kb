@@ -16,7 +16,7 @@ try:
     api_key = st.secrets['OPENAI_API_KEY']
     os.environ['OPENAI_API_KEY'] = api_key
 except:
-    load_dotenv('../data/.env')
+    load_dotenv('../CH01/.env')
     api_key = os.getenv('OPENAI_API_KEY')
 model = ChatOpenAI(model='gpt-4o', temperature=0)
 parser = StrOutputParser()
